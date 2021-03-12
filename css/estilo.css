@@ -1,0 +1,159 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	}
+
+body{
+	font-family: Verdana, sans-serif;
+	}
+
+.header{
+	background: #ff9900;
+	height: 10vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	padding-left: 80px;
+	padding:  8px 0 8px 80px;
+	}
+
+.titulo{
+	color: #fff;
+	font-size: 40px;
+	font-family: Audiowide, sans-serif;
+	}
+
+.corpo-jogo{
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+}
+
+#vez{
+	float: left; 
+	margin-right: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	}
+
+#mostrador{
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	border: 3px solid red;
+	border-radius: 15px;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	width: 252px;
+	}
+
+#xo{
+	margin-left: 8px;
+	}
+
+.espaco{
+	width: 80px;
+	height: 70px;
+	float: left;
+	text-align: center;
+	padding-top:10px;
+	}
+
+.tabuleiro{
+	width: 252px;
+	height: 252px;
+	margin: auto;
+	}
+
+#a1{
+	border-bottom: 2px solid #000;
+	border-right: 2px solid #000;
+	}
+
+#a2{
+	border-bottom: 2px solid #000;
+	border-right: 2px solid #000;
+	border-left: 2px solid #000;
+	}
+
+#a3{
+	border-bottom: 2px solid #000;
+	border-left: 2px solid #000;
+	}
+
+#b1{
+	border-bottom: 2px solid #000;
+	border-right: 2px solid #000;
+	border-top: 2px solid #000;
+	}
+
+#b2{
+	border-bottom: 2px solid #000;
+	border-right: 2px solid #000;
+	border-left: 2px solid #000;
+	border-top: 2px solid #000;
+	}
+
+#b3{
+	border-bottom: 2px solid #000;
+	border-left: 2px solid #000;
+	border-top: 2px solid #000;
+	}
+
+#c1{
+	border-top: 2px solid #000;
+	border-right: 2px solid #000;
+	}
+
+#c2{
+	border-top: 2px solid #000;
+	border-right: 2px solid #000;
+	border-left: 2px solid #000;
+	}
+
+#c3{
+	border-top: 2px solid #000;
+	border-left: 2px solid #000;
+	}
+
+.footer{
+	clear: both;
+	background:  #1a0f00;
+	display: flex;
+	align-items: center;
+	height: 9vh;
+	width: 100vw;
+	margin-top: 84px;
+	padding-left: 80px;
+}
+
+.autor{
+	color: #fff;
+	}
+
+@media (max-width: 370px){
+	.header{
+		padding-left: 0;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.titulo{
+		font-size: 30px;
+	}
+
+	.footer{
+		padding-left: 0;
+		justify-content: space-around;
+		align-items: center;
+	}
+}
+
+@media (min-height: 631px){
+	.footer{
+		position: absolute;
+		bottom: 0;
+	}
+}
