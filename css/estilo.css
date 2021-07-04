@@ -1,11 +1,14 @@
 
+
 *{
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 	}
 
 body{
 	font-family: Verdana, sans-serif;
+	overflow-x: hidden;
 	}
 
 .header{
@@ -24,98 +27,115 @@ body{
 	font-family: Audiowide, sans-serif;
 	}
 
+
 .corpo-jogo{
 	display: flex;
 	flex-direction: column;
-	align-self: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	min-height: 81vh;
 }
 
-#vez{
-	float: left; 
+#says-who-beggin{ 
 	margin-right: 10px;
 	font-size: 20px;
 	font-weight: bold;
 	}
 
-#mostrador{
+#panel{
 	display: flex;
 	align-items: center;
-	padding: 10px;
+	justify-content: center;
 	border: 3px solid red;
-	border-radius: 15px;
+	border-radius: 8px;
 	margin: auto;
 	margin-top: 50px;
 	margin-bottom: 30px;
 	width: 252px;
+	height: 50px;
+	background: #bbb8;
 	}
 
-#xo{
-	margin-left: 8px;
-	}
-
-.espaco{
-	width: 80px;
-	height: 70px;
-	float: left;
-	text-align: center;
-	padding-top:10px;
-	}
-
-.tabuleiro{
+.board{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
 	width: 252px;
 	height: 252px;
 	margin: auto;
+}
+
+.square{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 80px;
+	font-size: 50px;
 	}
 
-#a1{
+#p1{
 	border-bottom: 2px solid #000;
 	border-right: 2px solid #000;
 	}
 
-#a2{
+#p2{
 	border-bottom: 2px solid #000;
 	border-right: 2px solid #000;
 	border-left: 2px solid #000;
 	}
 
-#a3{
+#p3{
 	border-bottom: 2px solid #000;
 	border-left: 2px solid #000;
 	}
 
-#b1{
+#p4{
 	border-bottom: 2px solid #000;
 	border-right: 2px solid #000;
 	border-top: 2px solid #000;
 	}
 
-#b2{
-	border-bottom: 2px solid #000;
-	border-right: 2px solid #000;
-	border-left: 2px solid #000;
-	border-top: 2px solid #000;
+#p5{
+	border: 2px solid #000;
 	}
 
-#b3{
+#p6{
 	border-bottom: 2px solid #000;
 	border-left: 2px solid #000;
 	border-top: 2px solid #000;
 	}
 
-#c1{
+#p7{
 	border-top: 2px solid #000;
 	border-right: 2px solid #000;
 	}
 
-#c2{
+#p8{
 	border-top: 2px solid #000;
 	border-right: 2px solid #000;
 	border-left: 2px solid #000;
 	}
 
-#c3{
+#p9{
 	border-top: 2px solid #000;
 	border-left: 2px solid #000;
+	}
+
+	button{
+		width: 252px;
+		height: 50px;
+		font-size: 28px;
+		background: #000;
+		color: #fff;
+		border: 0;
+		border-radius: 8px;
+		margin-top: 30px;
+		display: none;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
 	}
 
 .footer{
