@@ -22,24 +22,25 @@
 
 		<main>
 			<div class="corpo-jogo">
-				<div id="mostrador">
-					<p id="vez">Vez do Jogador: </p>
-					<img id="xo"src="" border="0" height="50">
+				<div id="panel">
+					<p id="says-who-beggin">  </p>
+					<!--<img id="xo"src="" border="0" height="50">-->
 				</div>
 
-				<div class="tabuleiro">
-					<div id="a1" class="espaco" jogada=""> </div>
-					<div id="a2" class="espaco" jogada=""> </div>
-					<div id="a3" class="espaco" jogada=""> </div>
+				<div class="board">
+					<div id="p1" class="square" onclick="play(1);"> </div>
+					<div id="p2" class="square" onclick="play(2);"> </div>
+					<div id="p3" class="square" onclick="play(3);"> </div>
 
-					<div id="b1" class="espaco" jogada=""> </div>
-					<div id="b2" class="espaco" jogada=""> </div>
-					<div id="b3" class="espaco" jogada=""> </div>
+					<div id="p4" class="square" onclick="play(4);"> </div>
+					<div id="p5" class="square" onclick="play(5);"> </div>
+					<div id="p6" class="square" onclick="play(6);"> </div>
 
-					<div id="c1" class="espaco" jogada=""> </div>
-					<div id="c2" class="espaco" jogada=""> </div>
-					<div id="c3" class="espaco" jogada=""> </div>
+					<div id="p7" class="square" onclick="play(7);"> </div>
+					<div id="p8" class="square" onclick="play(8);"> </div>
+					<div id="p9" class="square" onclick="play(9);"> </div>
 				</div>
+				<button id="button" type="button" onclick="startGame();">Jogar de novo</button>
 			</div>
 		</main>
 		<footer>
@@ -47,7 +48,7 @@
 				<p class="autor"> Desenvolvido por Jonatas Santana</p>
 			</div>
 		</footer>
-		<script src="javascript/game.js">
+		<script src="javascript/script.js">
 		</script>
 
 	</body>
