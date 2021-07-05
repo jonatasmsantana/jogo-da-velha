@@ -7,47 +7,57 @@
 		<title> Jogo da Velha </title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">		
 
 	</head>
 
 	<body>
-		
-		<header>
-			<div class="header">
-				<p class="titulo"> Jogo da velha #</p>
-			</div>
-		</header>
 
-		<main>
-			<div class="corpo-jogo">
-				<div id="panel">
-					<p id="says-who-beggin">  </p>
-					<!--<img id="xo"src="" border="0" height="50">-->
+		<div class="global-container">		
+			<header>
+				<div class="header">
+					<p class="title"> Jogo da velha #</p>
 				</div>
+			</header>
 
-				<div class="board">
-					<div id="p1" class="square" onclick="play(1);"> </div>
-					<div id="p2" class="square" onclick="play(2);"> </div>
-					<div id="p3" class="square" onclick="play(3);"> </div>
+			<main>
+				<div class="main-container">
+					<div id="panel">
+						<p id="says-who-beggin">  </p>
+					</div>
 
-					<div id="p4" class="square" onclick="play(4);"> </div>
-					<div id="p5" class="square" onclick="play(5);"> </div>
-					<div id="p6" class="square" onclick="play(6);"> </div>
+					<div class="board">
+						<div id="p1" class="square" onclick="play(1);"> </div>
+						<div id="p2" class="square" onclick="play(2);"> </div>
+						<div id="p3" class="square" onclick="play(3);"> </div>
 
-					<div id="p7" class="square" onclick="play(7);"> </div>
-					<div id="p8" class="square" onclick="play(8);"> </div>
-					<div id="p9" class="square" onclick="play(9);"> </div>
+						<div id="p4" class="square" onclick="play(4);"> </div>
+						<div id="p5" class="square" onclick="play(5);"> </div>
+						<div id="p6" class="square" onclick="play(6);"> </div>
+
+						<div id="p7" class="square" onclick="play(7);"> </div>
+						<div id="p8" class="square" onclick="play(8);"> </div>
+						<div id="p9" class="square" onclick="play(9);"> </div>
+					</div>
+					<button id="button" type="button" onclick="startGame();">Jogar de novo</button>
 				</div>
-				<button id="button" type="button" onclick="startGame();">Jogar de novo</button>
+			</main>
+			<footer>
+				<div class="footer">
+					<p class="author"> Desenvolvido por Jonatas Santana</p>
+				</div>
+			</footer>
+
+			<div class="modal" id="modal" onclick="hideModal();">
+				<div class="message-card">
+					<p class="says-who-won" id="says-who-won"></p>
+					<div class="close">X</div>
+				</div>
 			</div>
-		</main>
-		<footer>
-			<div class="footer">
-				<p class="autor"> Desenvolvido por Jonatas Santana</p>
-			</div>
-		</footer>
+
+		</div>
+
 		<script src="javascript/script.js">
 		</script>
 
