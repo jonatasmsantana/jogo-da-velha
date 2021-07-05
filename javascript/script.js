@@ -220,7 +220,7 @@ function cpuPlaying(){
 		
 		checkWinner = checkIfWinnerExists();
 		if(checkWinner !== ""){
-			alert(checkWinner + "" + " venceu");
+			showWinner(checkWinner);
 			document.getElementById("button").style.display = "block";
 			isPlaying = false;
 		}
@@ -236,7 +236,7 @@ function checkIfWinnerExists(){
 			if(game[i][0] === "X"){
 				return "Você ";
 			}else if(game[i][0] === "O"){
-				return "O computador ";
+				return "A CPU ";
 			}
 		}
 	}
@@ -247,7 +247,7 @@ function checkIfWinnerExists(){
 			if(game[0][j] === "X"){
 				return "Você ";
 			}else if(game[0][j] === "O"){
-				return "O computador ";
+				return "A CPU ";
 			}
 		}
 	}
@@ -257,7 +257,7 @@ function checkIfWinnerExists(){
 		if(game[0][0] === "X"){
 				return "Você ";
 			}else if(game[0][0] === "O"){
-				return "O computador ";
+				return "A CPU ";
 			}
 	}
 
@@ -265,7 +265,7 @@ function checkIfWinnerExists(){
 		if(game[2][0] === "X"){
 				return "Você ";
 			}else if(game[2][0] === "O"){
-				return "O computador ";
+				return "A CPU ";
 			}
 	}
 	return "";
@@ -348,7 +348,7 @@ function play(position){
 			updateBoard();
 			checkWinner = checkIfWinnerExists();
 			if(checkWinner !== ""){
-				alert(checkWinner + "venceu");
+				showWinner(checkWinner);
 				document.getElementById("button").style.display = "flex";
 				isPlaying = false;
 			}
@@ -399,6 +399,17 @@ function startGame(){
 		document.getElementById("says-who-beggin").innerHTML = "CPU começa!";
 		cpuPlaying();
 	}
+}
+
+function hideModal(){
+	document.getElementById("modal").style.display = "none";
+}
+
+function showWinner(winner){
+
+	document.getElementById("says-who-won").innerHTML = `${winner} venceu!`;
+	document.getElementById("modal").style.display = "flex";
+	
 }
 
 window.addEventListener("load", startGame);
